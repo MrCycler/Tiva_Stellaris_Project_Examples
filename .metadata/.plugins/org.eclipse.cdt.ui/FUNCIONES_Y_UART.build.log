@@ -1,0 +1,21 @@
+
+**** Build of configuration Debug for project FUNCIONES_Y_UART ****
+
+"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+'Building file: ../main.c'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --include_path="C:/StellarisWare" -g --gcc --define="ccs" --define=PART_LM4F120H5QR --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:14: recipe for target 'main.obj' failed
+"../main.c", line 33: warning #225-D: function "printf" declared implicitly
+"../main.c", line 36: warning #225-D: function "scanf" declared implicitly
+"../main.c", line 97: error #20: identifier "FILE" is undefined
+"../main.c", line 107: error #20: identifier "FILE" is undefined
+"../main.c", line 114: error #20: identifier "FILE" is undefined
+"../main.c", line 116: error #20: identifier "EOF" is undefined
+4 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****

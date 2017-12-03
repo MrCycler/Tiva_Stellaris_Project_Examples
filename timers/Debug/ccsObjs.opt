@@ -1,0 +1,1 @@
+"./startup_ccs.obj" "./timers.obj" "./utils/uartstdio.obj" "../timers_ccs.cmd" -llibc.a -l"C:/StellarisWare/driverlib/ccs-cm4f/Debug/driverlib-cm4f.lib" 
