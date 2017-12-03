@@ -16,11 +16,11 @@ ORDERED_OBJS += \
 "../timers_ccs.cmd" \
 $(GEN_CMDS__FLAG) \
 -llibc.a \
--l"C:/StellarisWare/driverlib/ccs-cm4f/Debug/driverlib-cm4f.lib" \
+-l"/driverlib/ccs-cm4f/Debug/driverlib-cm4f.lib" \
 
 -include ../makefile.init
 
-RM := DEL /F
+RM := 
 RMDIR := RMDIR /S/Q
 
 # All of the sources participating in the build are defined here
@@ -138,7 +138,7 @@ all: timers.out
 timers.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: ARM Linker'
-	"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me -O2 -g --gcc --define=ccs="ccs" --define=PART_LM4F120H5QR --define=TARGET_IS_BLIZZARD_RA1 --diag_warning=225 --display_error_number --gen_func_subsections=on --ual -z --stack_size=256 -m"timers_ccs.map" --heap_size=0 -i"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/lib" -i"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --reread_libs --warn_sections --display_error_number --xml_link_info="timers_linkInfo.xml" --rom_model -o "timers.out" $(ORDERED_OBJS)
+	"" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me -O2 -g --gcc --define=ccs="ccs" --define=PART_LM4F120H5QR --define=TARGET_IS_BLIZZARD_RA1 --diag_warning=225 --display_error_number --gen_func_subsections=on --ual -z --stack_size=256 -m"timers_ccs.map" --heap_size=0 -i"/lib" -i"/include" --reread_libs --warn_sections --display_error_number --xml_link_info="timers_linkInfo.xml" --rom_model -o "timers.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	@$(MAKE) --no-print-directory post-build
@@ -152,7 +152,7 @@ clean:
 	-@echo ' '
 
 post-build:
-	-"C:/ti/ccsv6/utils/tiobj2bin/tiobj2bin" "timers.out" "timers.bin" "C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/ofd470" "C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/hex470" "C:/ti/ccsv6/utils/tiobj2bin/mkhex4bin"
+	-"/utils/tiobj2bin/tiobj2bin" "timers.out" "timers.bin" "/bin/ofd470" "/bin/hex470" "/utils/tiobj2bin/mkhex4bin"
 	-@echo ' '
 
 .PHONY: all clean dependents

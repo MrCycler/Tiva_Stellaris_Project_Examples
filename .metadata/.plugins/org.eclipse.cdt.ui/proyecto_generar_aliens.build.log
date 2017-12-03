@@ -2,6 +2,19 @@
 **** Build of configuration Debug for project proyecto_generar_aliens ****
 
 "C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
-gmake: Nothing to be done for 'all'.
+'Building file: ../main.c'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me --include_path="C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include" -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 6: warning #552-D: variable "temp" was set but never used
+"../main.c", line 29: warning #552-D: variable "temp" was set but never used
+"../main.c", line 128: warning #179-D: variable "letra" was declared but never referenced
+'Finished building: ../main.c'
+' '
+'Building target: proyecto_generar_aliens.out'
+'Invoking: ARM Linker'
+"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --display_error_number --diag_warning=225 --diag_wrap=off -z -m"proyecto_generar_aliens.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/lib" -i"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="proyecto_generar_aliens_linkInfo.xml" --rom_model -o "proyecto_generar_aliens.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+'Finished building target: proyecto_generar_aliens.out'
+' '
 
 **** Build Finished ****

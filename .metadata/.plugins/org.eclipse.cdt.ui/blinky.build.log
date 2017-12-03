@@ -2,18 +2,6 @@
 **** Build of configuration Debug for project blinky ****
 
 "C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
-'Building file: ../blinky.c'
-'Invoking: ARM Compiler'
-"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me -O2 -g --include_path="C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --include_path="C:/StellarisWare" --gcc --define=ccs="ccs" --define=PART_LM4F120H5QR --diag_warning=225 --display_error_number --gen_func_subsections=on --ual --preproc_with_compile --preproc_dependency="blinky.d"  "../blinky.c"
-'Finished building: ../blinky.c'
-' '
-'Building target: blinky.out'
-'Invoking: ARM Linker'
-"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me -O2 -g --gcc --define=ccs="ccs" --define=PART_LM4F120H5QR --diag_warning=225 --display_error_number --gen_func_subsections=on --ual -z --stack_size=256 -m"blinky_ccs.map" --heap_size=0 -i"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/lib" -i"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --reread_libs --warn_sections --display_error_number --xml_link_info="blinky_linkInfo.xml" --rom_model -o "blinky.out" "./blinky.obj" "./startup_ccs.obj" "../blinky_ccs.cmd"  -llibc.a 
-<Linking>
-'Finished building target: blinky.out'
-' '
-"C:/ti/ccsv6/utils/tiobj2bin/tiobj2bin" "blinky.out" "blinky.bin" "C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/ofd470" "C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/hex470" "C:/ti/ccsv6/utils/tiobj2bin/mkhex4bin"
-' '
+gmake: Nothing to be done for 'all'.
 
 **** Build Finished ****

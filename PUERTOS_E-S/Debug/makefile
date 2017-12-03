@@ -121,32 +121,32 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-PRUEBA\ 1.out \
+PUERTOS_E-S.out \
 
 EXE_OUTPUTS__QUOTED += \
-"PRUEBA 1.out" \
+"PUERTOS_E-S.out" \
 
 BIN_OUTPUTS += \
-PRUEBA\ 1.hex \
+PUERTOS_E-S.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"PRUEBA 1.hex" \
+"PUERTOS_E-S.hex" \
 
 
 # All Target
-all: PRUEBA\ 1.out
+all: PUERTOS_E-S.out
 
 # Tool invocations
-PRUEBA\ 1.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+PUERTOS_E-S.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: ARM Linker'
-	"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -g --gcc --define="ccs" --define=PART_LM4F121H5QR --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi -z -m"PRUEBA 1.map" --stack_size=512 --heap_size=0 -i"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/lib" -i"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --reread_libs --diag_wrap=off --warn_sections --display_error_number --xml_link_info="PRUEBA 1_linkInfo.xml" --rom_model -o "PRUEBA 1.out" $(ORDERED_OBJS)
+	"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -g --gcc --define="ccs" --define=PART_LM4F121H5QR --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi -z -m"PUERTOS_E-S.map" --stack_size=512 --heap_size=0 -i"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/lib" -i"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --reread_libs --diag_wrap=off --warn_sections --display_error_number --xml_link_info="PUERTOS_E-S_linkInfo.xml" --rom_model -o "PUERTOS_E-S.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-PRUEBA\ 1.hex: $(EXE_OUTPUTS)
+PUERTOS_E-S.hex: $(EXE_OUTPUTS)
 	@echo 'Invoking: ARM Hex Utility'
-	"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armhex"  -o "PRUEBA 1.hex" $(EXE_OUTPUTS__QUOTED)
+	"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armhex"  -o "PUERTOS_E-S.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $@'
 	@echo ' '
 
