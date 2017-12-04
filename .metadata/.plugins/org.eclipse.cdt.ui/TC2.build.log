@@ -8,11 +8,6 @@
 
 >> Compilation failure
 subdir_rules.mk:7: recipe for target 'main.obj' failed
-"../main.c", line 23: error #41: expected an identifier
-"../main.c", line 25: error #20: identifier "uint_32" is undefined
-"../main.c", line 26: error #20: identifier "uint_32" is undefined
-"../main.c", line 27: error #20: identifier "uint_32" is undefined
-"../main.c", line 39: error #20: identifier "centM" is undefined
 "../main.c", line 51: warning #225-D: function "presionado1" declared implicitly
 "../main.c", line 57: warning #225-D: function "presionado2" declared implicitly
 "../main.c", line 63: warning #225-D: function "presionado3" declared implicitly
@@ -26,7 +21,7 @@ subdir_rules.mk:7: recipe for target 'main.obj' failed
 "../main.c", line 113: error #20: identifier "n" is undefined
 "../main.c", line 121: warning #225-D: function "presionadotiva1" declared implicitly
 "../main.c", line 124: warning #225-D: function "presionado4" declared implicitly
-9 errors detected in the compilation of "../main.c".
+4 errors detected in the compilation of "../main.c".
 gmake: *** [main.obj] Error 1
 gmake: Target 'all' not remade because of errors.
 
