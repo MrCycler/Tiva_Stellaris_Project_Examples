@@ -1,43 +1,17 @@
 
-**** Clean-only build of configuration Debug for project Pantalla_LCD ****
-
-"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k clean 
-DEL /F  "PANTALLALED.out"  "PANTALLALED.hex" 
-DEL /F "SysTick.d" "lcd.d" "main.d" "tm4c123gh6pm_startup_ccs.d" 
-DEL /F "SysTick.obj" "lcd.obj" "main.obj" "tm4c123gh6pm_startup_ccs.obj" 
-'Finished clean'
-' '
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project Pantalla_LCD ****
+**** Build of configuration Debug for project LAB4-P2 ****
 
 "C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
-'Building file: ../SysTick.c'
-'Invoking: ARM Compiler'
-"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include" -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="SysTick.d"  "../SysTick.c"
-'Finished building: ../SysTick.c'
-' '
-'Building file: ../lcd.c'
-'Invoking: ARM Compiler'
-"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include" -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="lcd.d"  "../lcd.c"
-'Finished building: ../lcd.c'
-' '
 'Building file: ../main.c'
 'Invoking: ARM Compiler'
 "C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include" -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
 'Finished building: ../main.c'
 ' '
-'Building file: ../tm4c123gh6pm_startup_ccs.c'
-'Invoking: ARM Compiler'
-"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include" -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="tm4c123gh6pm_startup_ccs.d"  "../tm4c123gh6pm_startup_ccs.c"
-'Finished building: ../tm4c123gh6pm_startup_ccs.c'
-' '
-'Building target: Pantalla_LCD.out'
+'Building target: LAB4-P2.out'
 'Invoking: ARM Linker'
-"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi -z -m"Pantalla_LCD.map" --stack_size=512 --heap_size=0 -i"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/lib" -i"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --reread_libs --diag_wrap=off --warn_sections --display_error_number --xml_link_info="Pantalla_LCD_linkInfo.xml" --rom_model -o "Pantalla_LCD.out" "./SysTick.obj" "./lcd.obj" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi -z -m"LAB4-P2.map" --stack_size=512 --heap_size=0 -i"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/lib" -i"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --reread_libs --diag_wrap=off --warn_sections --display_error_number --xml_link_info="LAB4-P2_linkInfo.xml" --rom_model -o "LAB4-P2.out" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
 <Linking>
-'Finished building target: Pantalla_LCD.out'
+'Finished building target: LAB4-P2.out'
 ' '
 
 **** Build Finished ****

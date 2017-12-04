@@ -1,7 +1,10 @@
 /*
- * main.c
+ PROGRAMA:GENERAR PWM SEGÚN SUMINISTRO ELEGIDO
+ Autor: RKZ
+ DESCRIPCION:
  */
-/////////////////////////////////////////////////BOMBA PARTE A)
+
+//BOMBA PARTE A)
 
 #include <stdint.h>
 #include "tm4c123gh6pm.h"
