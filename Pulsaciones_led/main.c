@@ -1,6 +1,7 @@
 /*
  PROGRAMA: PULSACIONES EN LED
  Autor: RKZ
+ DESCRIPCION: Realiza la pulsación repetitiva del led PF1 en color morado
  */
 #include <stdint.h>
 #include "tm4c123gh6pm.h"
