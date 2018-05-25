@@ -1,4 +1,6 @@
 #include <stdint.h>
+#include<stdio.h>
+#include<math.h>
 #include "tm4c123gh6pm.h"
 #include "serialcom.h"
 
@@ -10,22 +12,22 @@ void SysTick_Init(void){
 }
 
 void config_sws(void){
-	// activamos la señal de reloj del puerto F
+	// activamos la seï¿½al de reloj del puerto F
 	SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R5;
 	// esperamos a que realmente se active
 	while( (SYSCTL_PRGPIO_R & SYSCTL_PRGPIO_R5)==0) { }
-	// SW1 está conectado al pin PF4 y SW2 al PF0 (Desbloqueamos el SW2)
+	// SW1 estï¿½ conectado al pin PF4 y SW2 al PF0 (Desbloqueamos el SW2)
 	GPIO_PORTF_LOCK_R = 0x4C4F434B;
 	GPIO_PORTF_CR_R = 0x1F;
 	//Configuraciones de puertos
 	GPIO_PORTF_DIR_R &= ~(0x11); // PF4 y PF0 pin de entrada
-	GPIO_PORTF_AFSEL_R &= ~(0x11); // no usamos función alternativa
+	GPIO_PORTF_AFSEL_R &= ~(0x11); // no usamos funciï¿½n alternativa
 	GPIO_PORTF_PUR_R |= 0x11; // activamos resistencia de pull-up en pin PF4
 	GPIO_PORTF_DEN_R |= 0x11; // PF4 pin digital
 }
 
 void config_leds(void){
-	// activamos la señal de reloj del puerto F
+	// activamos la seï¿½al de reloj del puerto F
 	SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R5;
 	// esperamos a que realmente se active
 	while( (SYSCTL_PRGPIO_R & SYSCTL_PRGPIO_R5)==0) { }
@@ -41,6 +43,33 @@ void US_trigger(void){
 	for(n = 0; n < 100; n++);
 	GPIO_PORTF_DATA_R  &= ~(0x02) ;
 }
+//////////////////////////////////////////////////////////////////
+// Converts a floating point number to string. (char *res === array[])
+void ftoa(float n, char *res, int afterpoint)
+{
+    // Extract integer part
+    int ipart = (int)n;
+ 
+    // Extract floating part
+    float fpart = n - (float)ipart;
+ 
+    // convert integer part to string
+    int i = intToStr(ipart, res, 0);
+ 
+    // check for display option after point
+    if (afterpoint != 0)
+    {
+        res[i] = '.';  // add dot
+ 
+        // Get the value of fraction part upto given no.
+        // of points after dot. The third parameter is needed
+        // to handle cases like 233.007
+        fpart = fpart * pow(10, afterpoint);
+ 
+        intToStr((int)fpart, res + i + 1, afterpoint);
+    }
+}
+/////////////////////////////////////////////////////////////
 
 int main(void) {
 	Setup_UART0();
